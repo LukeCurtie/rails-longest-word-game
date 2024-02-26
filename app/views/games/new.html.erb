@@ -1,0 +1,21 @@
+
+
+<p> <%= @letters %></p>
+
+<label for="form"> What is the longest word you can find?</label>
+<form action="/score" data-turbo="false">
+  <%= hidden_field_tag :authenticity_token, form_authenticity_token %>
+  <%= hidden_field_tag :letters, @letters %>
+
+  <input type="text" name="word">
+
+
+  <input type="submit" value="Play">
+
+
+
+</form>
+
+
+
+<%# # https://wagon-dictionary.herokuapp.com/word %>
